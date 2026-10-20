@@ -79,7 +79,7 @@ body {
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3); 
     border-radius: 50%;
     border: 4px solid var(--vidro);
-
+    animation: flutuar 5s ease-in-out infinite;
 
 }
 
@@ -177,5 +177,71 @@ margin-bottom: 5px;
     color: rgba( 226, 232, 240, 0.8);
     line-height: 1.25rem;
 
+}
+.particulas {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background: radial-gradient(circle at 10% 20%, var(--primaria), 0% transparent 20%), 
+    radial-gradient( circle at 90% 80%, var(--secundaria) 0%, transparent 20%), var(var(--maisescuro));}
 
+.certificacoes {
+    padding: 6rem 2rem;
+    scroll-margin-top: 90px;
+}
+
+.certificacoes-titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--claro);
+}
+
+.certificacoes-caixa {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certificado-card {
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    background: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.certificado-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificado-card h3 {
+    color: #a78bfa;
+    margin-bottom: 1rem;
+}
+
+.certificado-card p {
+    color: var(--claro);
+    margin-bottom: 0.5rem;
+}
+
+#projetos,
+#qualificacoes {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 600px) {
+    .certificacoes-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    .certificacoes-titulo {
+        font-size: 2rem;
+    }
 }
