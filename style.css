@@ -21,6 +21,7 @@ html {scroll-behavior: smooth;
 body {
     background-color: var(--escuro);
     color: var(--claro);
+    
 }
 
 .navegacao {
@@ -42,6 +43,7 @@ body {
 }
 .menu-link{
     text-decoration: none;
+    font-size: 2rem;
     color: var(--claro);
     font-weight: 500;
     position: relative;
@@ -49,13 +51,14 @@ body {
 }
 .menu-link::after{
     content: "";
-    height: 2px;
+    height: 3px;
     width: 0;
     position: absolute;
     bottom: 0;
     left: 0;
     background: linear-gradient(90deg, var(--primaria), var(--secundaria));
     transition: 0.5s ease;
+   
 
 }
 
@@ -77,7 +80,11 @@ body {
     border-radius: 50%;
     border: 4px solid var(--vidro);
 
+
 }
+
+
+
 
 h1 { 
     font-size: 2.5rem;
@@ -88,7 +95,7 @@ h1 {
 }
 
 .cabecalho-subtitulo{
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     color: var(--claro);
 }
 
@@ -97,14 +104,15 @@ h1 {
 
 }
 .sobre-titulo{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .sobre-caixa{
+    padding: 2rem;
     color: var(--claro);
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     border-radius: 16px;
     border: 1px solid var(--vidro);
@@ -113,8 +121,61 @@ h1 {
 
 }
 
-.sobre-paragrafo{
+.sobre-paragrafo {
+    text-align: center;
+font-size: 1.5rem;
+
+}
+.projeto-maior {
+    text-align: center;
+}
+.projetos-caixa { 
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
+gap: 1.5rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.projetos-card {
+width: 100%;
+min-width: 0;
+background: rgba( 255, 255, 255, 0.05);
+backdrop-filter: blur( 5px);
+border-radius: 16px;
+border: 1px solid var(--vidro);
+overflow: hidden;
+transition: all 0.5s ease;
+cursor: pointer;
+}
+.projetos-titulo {
 text-align: center;
 font-size: 2.5rem;
+margin-bottom: 30px;
+ }
+
+ .projetos-card:hover{
+box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+transform: translateY(-10px) scale(1.03);
+ }
+
+.projetos-imagem {
+height: 200px;
+width: 100%;
+object-fit: cover;
+display: block;}
+
+.info-projetos {
+margin-bottom: 5px;
+}
+
+.caixa-texto-projeto{
+    padding: 1.5rem;
+
+}
+.paragrafo-projetos {
+    color: rgba( 226, 232, 240, 0.8);
+    line-height: 1.25rem;
+
 
 }
